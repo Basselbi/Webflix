@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="WebFlix" namespace="WebFlix.domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Realisateur" table="REALISATEUR" lazy="true" >
+    <id name="Realisateurid" column="REALISATEURID" />
+    <many-to-one name="Informationpersonel">
+      <column name="PERSONELID" sql-type="NUMBER" not-null="false" />
+    </many-to-one>
+    <property name="Nomrealisateur">
+      <column name="NOMREALISATEUR" sql-type="VARCHAR2" not-null="false" />
+    </property>
+    <bag name="Film" inverse="true">
+      <key column="REALISATEURID" />
+      <one-to-many class="Film" />
+    </bag>
+  </class>
+</hibernate-mapping>

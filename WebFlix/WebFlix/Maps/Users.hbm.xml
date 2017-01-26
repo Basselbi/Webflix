@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="WebFlix" namespace="WebFlix.domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Users" table="USERS" lazy="true" >
+    <id name="Userid" column="USERID" />
+    <property name="Nom">
+      <column name="NOM" sql-type="VARCHAR2" not-null="true" />
+    </property>
+    <property name="Prenom">
+      <column name="PRENOM" sql-type="VARCHAR2" not-null="true" />
+    </property>
+    <property name="Courriel">
+      <column name="COURRIEL" sql-type="VARCHAR2" not-null="false" unique="true" />
+    </property>
+    <property name="Notelephone">
+      <column name="NOTELEPHONE" sql-type="CHAR" not-null="true" />
+    </property>
+    <property name="Datenaissance">
+      <column name="DATENAISSANCE" sql-type="DATE" not-null="true" />
+    </property>
+    <property name="Motpasse">
+      <column name="MOTPASSE" sql-type="VARCHAR2" not-null="true" />
+    </property>
+    <bag name="Location" inverse="true">
+      <key column="USERID" />
+      <one-to-many class="Location" />
+    </bag>
+    <bag name="Cartecredit" inverse="true">
+      <key column="USERID" />
+      <one-to-many class="Cartecredit" />
+    </bag>
+  </class>
+</hibernate-mapping>

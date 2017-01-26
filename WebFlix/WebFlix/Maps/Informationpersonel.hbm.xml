@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="WebFlix" namespace="WebFlix.domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Informationpersonel" table="INFORMATIONPERSONEL" lazy="true" >
+    <id name="Personelid" column="PERSONELID" />
+    <property name="Nom">
+      <column name="NOM" sql-type="VARCHAR2" not-null="false" />
+    </property>
+    <property name="Prenom">
+      <column name="PRENOM" sql-type="VARCHAR2" not-null="false" />
+    </property>
+    <property name="Datenaissance">
+      <column name="DATENAISSANCE" sql-type="DATE" not-null="false" />
+    </property>
+    <property name="Lieunaissance">
+      <column name="LIEUNAISSANCE" sql-type="VARCHAR2" not-null="false" />
+    </property>
+    <property name="Biographie">
+      <column name="BIOGRAPHIE" sql-type="CLOB" not-null="false" />
+    </property>
+    <bag name="Realisateur" inverse="true">
+      <key column="PERSONELID" />
+      <one-to-many class="Realisateur" />
+    </bag>
+    <bag name="Acteur" inverse="true">
+      <key column="PERSONELID" />
+      <one-to-many class="Acteur" />
+    </bag>
+    <bag name="Scenariste" inverse="true">
+      <key column="PERSONELID" />
+      <one-to-many class="Scenariste" />
+    </bag>
+  </class>
+</hibernate-mapping>
