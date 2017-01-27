@@ -6,9 +6,8 @@ using NHibernate.Validator.Constraints;
 
 namespace WebFlix.domain {
     
-    public class Employe {
+    public class Client {
         public virtual decimal Userid { get; set; }
-        [Length(24)]
-        public virtual string Matricule { get; set; }
+        public virtual Forfait Forfait { get; set; }
     }
 }

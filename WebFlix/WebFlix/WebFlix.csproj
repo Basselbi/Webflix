@@ -66,7 +66,7 @@
   <ItemGroup>
     <Compile Include="domain\Acteur.cs" />
     <Compile Include="domain\Cartecredit.cs" />
-    <Compile Include="domain\connection.cs" />
+    <Compile Include="domain\Client.cs" />
     <Compile Include="domain\Employe.cs" />
     <Compile Include="domain\Film.cs" />
     <Compile Include="domain\Filmgenre.cs" />

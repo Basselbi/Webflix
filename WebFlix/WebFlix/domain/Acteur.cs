@@ -1,16 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System;
 using System.Text;
-using System.Threading.Tasks;
+using System.Collections.Generic;
+using NHibernate.Validator.Constraints;
 
-namespace WebFlix.domain
-{
-    public class Acteur
-    {
-        public Acteur() { }
+
+namespace WebFlix.domain {
+    
+    public class Acteur {
+        public Acteur() {
+			Role = new List<Role>();
+        }
         public virtual decimal Acteurid { get; set; }
         public virtual Informationpersonel Informationpersonel { get; set; }
+        [Length(100)]
         public virtual string Nomacteur { get; set; }
+        public virtual IList<Role> Role { get; set; }
     }
 }
