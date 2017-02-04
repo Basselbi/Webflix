@@ -83,6 +83,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(53)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(709, 337);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonLogin);

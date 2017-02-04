@@ -16,7 +16,6 @@ namespace WebFlix
         public FormLogin()
         {
             InitializeComponent();
-            this.BackColor = Color.FromArgb(238, 53, 35);
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
