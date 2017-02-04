@@ -68,6 +68,7 @@
             this.buttonLogin.TabIndex = 2;
             this.buttonLogin.Text = "SE CONNECTER";
             this.buttonLogin.UseVisualStyleBackColor = false;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // pictureBox1
             // 
