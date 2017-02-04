@@ -30,37 +30,60 @@
         {
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonRent = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLogout
             // 
-            this.buttonLogout.Location = new System.Drawing.Point(618, 12);
+            this.buttonLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(38)))), ((int)(((byte)(53)))));
+            this.buttonLogout.FlatAppearance.BorderSize = 0;
+            this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogout.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogout.ForeColor = System.Drawing.Color.White;
+            this.buttonLogout.Location = new System.Drawing.Point(625, 258);
             this.buttonLogout.Name = "buttonLogout";
-            this.buttonLogout.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogout.Size = new System.Drawing.Size(150, 34);
             this.buttonLogout.TabIndex = 0;
-            this.buttonLogout.Text = "Quitter";
-            this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.Text = "QUITTER";
+            this.buttonLogout.UseVisualStyleBackColor = false;
             this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // buttonRent
             // 
-            this.buttonRent.Location = new System.Drawing.Point(414, 210);
+            this.buttonRent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(35)))), ((int)(((byte)(58)))));
+            this.buttonRent.FlatAppearance.BorderSize = 0;
+            this.buttonRent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRent.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRent.ForeColor = System.Drawing.Color.White;
+            this.buttonRent.Location = new System.Drawing.Point(625, 12);
             this.buttonRent.Name = "buttonRent";
-            this.buttonRent.Size = new System.Drawing.Size(126, 23);
+            this.buttonRent.Size = new System.Drawing.Size(150, 33);
             this.buttonRent.TabIndex = 1;
-            this.buttonRent.Text = "Locationner";
-            this.buttonRent.UseVisualStyleBackColor = true;
+            this.buttonRent.Text = "EMPRUNTER";
+            this.buttonRent.UseVisualStyleBackColor = false;
             this.buttonRent.Click += new System.EventHandler(this.buttonRent_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(607, 280);
+            this.dataGridView1.TabIndex = 2;
             // 
             // FormBrowse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 304);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(790, 304);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonRent);
             this.Controls.Add(this.buttonLogout);
             this.Name = "FormBrowse";
             this.Text = "WEBFLIX";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -69,5 +92,6 @@
 
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.Button buttonRent;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

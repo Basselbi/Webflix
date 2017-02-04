@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -16,6 +17,18 @@ namespace WebFlix
         public FormBrowse()
         {
             InitializeComponent();
+        }
+
+        // Sexy gradient
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
+                                                                       Color.Gray,
+                                                                       Color.Black,
+                                                                       45F))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
         }
 
         private void buttonLogout_Click(object sender, EventArgs e)
