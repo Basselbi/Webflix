@@ -1,11 +1,9 @@
 using System;
 using System.Text;
 using System.Collections.Generic;
-using NHibernate.Validator.Constraints;
-
+using NHibernate.Validator;
 
 namespace WebFlix.domain {
-    
     public class Cartecredit {
         public virtual decimal Carteid { get; set; }
         public virtual Users Users { get; set; }

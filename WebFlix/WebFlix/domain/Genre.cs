@@ -1,11 +1,9 @@
 using System;
 using System.Text;
 using System.Collections.Generic;
-using NHibernate.Validator.Constraints;
-
+using NHibernate.Validator;
 
 namespace WebFlix.domain {
-    
     public class Genre {
         public Genre() {
 			Filmgenre = new List<Filmgenre>();
