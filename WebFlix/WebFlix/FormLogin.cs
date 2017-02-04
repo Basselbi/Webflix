@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace WebFlix
 {
-    public partial class Form1 : Form
+    public partial class FormLogin : Form
     {
-        public Form1()
+        public FormLogin()
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(238, 53, 35);
         }
     }
 }
