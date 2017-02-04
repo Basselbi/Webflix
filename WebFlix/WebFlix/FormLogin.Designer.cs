@@ -33,7 +33,6 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.linkLabelCreateAccount = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,24 +78,11 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // linkLabelCreateAccount
-            // 
-            this.linkLabelCreateAccount.AutoSize = true;
-            this.linkLabelCreateAccount.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelCreateAccount.LinkColor = System.Drawing.Color.White;
-            this.linkLabelCreateAccount.Location = new System.Drawing.Point(296, 325);
-            this.linkLabelCreateAccount.Name = "linkLabelCreateAccount";
-            this.linkLabelCreateAccount.Size = new System.Drawing.Size(93, 14);
-            this.linkLabelCreateAccount.TabIndex = 4;
-            this.linkLabelCreateAccount.TabStop = true;
-            this.linkLabelCreateAccount.Text = "PAS DE COMPTE?";
-            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 360);
-            this.Controls.Add(this.linkLabelCreateAccount);
+            this.ClientSize = new System.Drawing.Size(709, 337);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPassword);
@@ -115,7 +101,6 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.LinkLabel linkLabelCreateAccount;
     }
 }
 
