@@ -3,7 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using NHibernate.Validator;
 
-namespace WebFlix.domain {
+namespace WebFlix.Domain {
     public class Film {
         public Film() {
 			Location = new List<Location>();

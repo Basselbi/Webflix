@@ -3,7 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using NHibernate.Validator;
 
-namespace WebFlix.domain {
+namespace WebFlix.Domain {
     public class Genre {
         public Genre() {
 			Filmgenre = new List<Filmgenre>();

@@ -3,7 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using NHibernate.Validator;
 
-namespace WebFlix.domain {
+namespace WebFlix.Domain {
     public class Cartecredit {
         public virtual decimal Carteid { get; set; }
         public virtual Users Users { get; set; }

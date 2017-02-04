@@ -3,7 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using NHibernate.Validator;
 
-namespace WebFlix.domain {
+namespace WebFlix.Domain {
     public class Scenaristefilm {
         public virtual Scenariste Scenariste { get; set; }
         public virtual Film Film { get; set; }

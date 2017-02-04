@@ -68,21 +68,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="domain\Acteur.cs" />
-    <Compile Include="domain\Cartecredit.cs" />
-    <Compile Include="domain\Client.cs" />
-    <Compile Include="domain\Employe.cs" />
-    <Compile Include="domain\Film.cs" />
-    <Compile Include="domain\Filmgenre.cs" />
-    <Compile Include="domain\Forfait.cs" />
-    <Compile Include="domain\Genre.cs" />
-    <Compile Include="domain\Informationpersonel.cs" />
-    <Compile Include="domain\Location.cs" />
-    <Compile Include="domain\Realisateur.cs" />
-    <Compile Include="domain\Role.cs" />
-    <Compile Include="domain\Scenariste.cs" />
-    <Compile Include="domain\Scenaristefilm.cs" />
-    <Compile Include="domain\Users.cs" />
+    <Compile Include="Domain\Acteur.cs" />
+    <Compile Include="Domain\Cartecredit.cs" />
+    <Compile Include="Domain\Client.cs" />
+    <Compile Include="Domain\Employe.cs" />
+    <Compile Include="Domain\Film.cs" />
+    <Compile Include="Domain\Filmgenre.cs" />
+    <Compile Include="Domain\Forfait.cs" />
+    <Compile Include="Domain\Genre.cs" />
+    <Compile Include="Domain\Informationpersonel.cs" />
+    <Compile Include="Domain\Location.cs" />
+    <Compile Include="Domain\Realisateur.cs" />
+    <Compile Include="Domain\Role.cs" />
+    <Compile Include="Domain\Scenariste.cs" />
+    <Compile Include="Domain\Scenaristefilm.cs" />
+    <Compile Include="Domain\Users.cs" />
     <Compile Include="Equipe15_DATASET.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -134,7 +134,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="mapping\hibernate.cfg.xml" />
+    <Content Include="Mapping\hibernate.cfg.xml" />
     <Content Include="Maps\Acteur.hbm.xml" />
     <Content Include="Maps\Cartecredit.hbm.xml" />
     <Content Include="Maps\Client.hbm.xml" />
