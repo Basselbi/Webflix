@@ -21,7 +21,7 @@ namespace WebFlix
             // Get movies from db
             ISession s = NHibernateHelper.GetCurrentSession();
             ITransaction tx = s.BeginTransaction();
-            IQuery query = s.CreateQuery("select f from Film f");
+            IQuery query = s.CreateQuery("select f from Film f where f.Qtydisponible > 0 order by f.Annesortie DESC, f.Titre");
             movies = query.List<Film>();
             tx.Commit();
 
