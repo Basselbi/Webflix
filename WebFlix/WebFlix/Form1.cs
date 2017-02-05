@@ -29,5 +29,11 @@ namespace WebFlix
                 
             }
         }
+
+        private void InscriptionBOX_Click(object sender, EventArgs e)
+        {
+            InscriptionForm  formInscriptionForm= new InscriptionForm();
+            formInscriptionForm.Show();
+        }
     }
 }

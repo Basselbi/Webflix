@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NHibernate.Cfg;
 
+
 namespace WebFlix.domain
 {
     public class NHibernateHelper
@@ -27,10 +28,10 @@ namespace WebFlix.domain
                 if (_sessionFactory == null)
 
                 {
+                   
+                    var configuration = new Configuration().Configure();
 
-                    var configuration = new Configuration();
-
-                    configuration.Configure();
+                    
 
                     configuration.AddAssembly(typeof(Users).Assembly);
 

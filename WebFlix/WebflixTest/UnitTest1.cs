@@ -8,7 +8,7 @@ using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
 using WebFlix.domain;
 
-using NHibernate.Cfg;
+
 
 namespace WebflixTest
 {

@@ -4,8 +4,13 @@
 
     partial class Equipe15_dataset
     {
-        partial class CONNEXIONCLIENTDataTable
+        partial class DataTable1DataTable
         {
+
+
+            partial class CONNEXIONCLIENTDataTable
+            {
+            }
         }
     }
 }
