@@ -1,13 +1,15 @@
-﻿using System;
+﻿using NHibernate;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebFlix.Helpers;
+using WebFlix.Domain;
+using NHibernate.Cfg;
 
 namespace WebFlix
 {
@@ -20,11 +22,17 @@ namespace WebFlix
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            var th = new Thread(() => Application.Run(new FormBrowse()));
-            th.SetApartmentState(ApartmentState.STA); // Deprecation Fix
-            th.Start();
+            ISession s = NHibernateHelper.GetCurrentSession();
+            ITransaction tx = s.BeginTransaction();
+            IQuery query = s.CreateQuery("select u from Users u where u.Courriel = :courriel");
+            query.SetString("courriel", "RobertCFlores21@gmail.com");
 
-            this.Close();
+            IList<Users> result = query.List<Users>();
+            foreach (Users u in result)
+            {
+                Console.Out.WriteLine(u.Nom);
+            }
+            tx.Commit();
         }
     }
 }

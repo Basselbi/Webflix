@@ -5,27 +5,31 @@ using NHibernate.Cfg;
 namespace WebFlix.Helpers
 {
     /*
+     * Inspiré de
      * http://nhibernate.info/doc/nhibernate-reference/quickstart.html#quickstart-persistentclass
      */
     public sealed class NHibernateHelper
     {
-        private const string CurrentSessionKey = "nhibernate.current_session";
         private static readonly ISessionFactory sessionFactory;
+        private static ISession currentSession;
 
         static NHibernateHelper()
         {
-            sessionFactory = new Configuration().Configure().BuildSessionFactory();
+            Configuration cfg = new Configuration();
+            cfg.SetProperty("dialect", "NHibernate.Dialect.Oracle10gDialect");
+            cfg.SetProperty("connection.driver_class", "NHibernate.Driver.OracleManagedDataClientDriver");
+            cfg.SetProperty("connection.connection_string", "User Id=equipe15;Password=7fUXztFc;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=big-data-3.logti.etsmtl.ca)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=Log660)))");
+            cfg.AddAssembly("WebFlix");
+            sessionFactory = cfg.BuildSessionFactory();
+
+            currentSession = null;
         }
 
         public static ISession GetCurrentSession()
         {
-            HttpContext context = HttpContext.Current;
-            ISession currentSession = context.Items[CurrentSessionKey] as ISession;
-
             if (currentSession == null)
             {
                 currentSession = sessionFactory.OpenSession();
-                context.Items[CurrentSessionKey] = currentSession;
             }
 
             return currentSession;
@@ -33,9 +37,6 @@ namespace WebFlix.Helpers
 
         public static void CloseSession()
         {
-            HttpContext context = HttpContext.Current;
-            ISession currentSession = context.Items[CurrentSessionKey] as ISession;
-
             if (currentSession == null)
             {
                 // No current session
@@ -43,7 +44,6 @@ namespace WebFlix.Helpers
             }
 
             currentSession.Close();
-            context.Items.Remove(CurrentSessionKey);
         }
 
         public static void CloseSessionFactory()

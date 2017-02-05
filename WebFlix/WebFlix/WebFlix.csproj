@@ -154,22 +154,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Mapping\hibernate.cfg.xml" />
-    <Content Include="Maps\Acteur.hbm.xml" />
-    <Content Include="Maps\Cartecredit.hbm.xml" />
-    <Content Include="Maps\Client.hbm.xml" />
-    <Content Include="Maps\Employe.hbm.xml" />
-    <Content Include="Maps\Film.hbm.xml" />
-    <Content Include="Maps\Filmgenre.hbm.xml" />
-    <Content Include="Maps\Forfait.hbm.xml" />
-    <Content Include="Maps\Genre.hbm.xml" />
-    <Content Include="Maps\Informationpersonel.hbm.xml" />
-    <Content Include="Maps\Location.hbm.xml" />
-    <Content Include="Maps\Realisateur.hbm.xml" />
-    <Content Include="Maps\Role.hbm.xml" />
-    <Content Include="Maps\Scenariste.hbm.xml" />
-    <Content Include="Maps\Scenaristefilm.hbm.xml" />
-    <Content Include="Maps\Users.hbm.xml" />
+    <EmbeddedResource Include="Maps\Acteur.hbm.xml" />
+    <EmbeddedResource Include="Maps\Cartecredit.hbm.xml" />
+    <EmbeddedResource Include="Maps\Client.hbm.xml" />
+    <EmbeddedResource Include="Maps\Employe.hbm.xml" />
+    <EmbeddedResource Include="Maps\Film.hbm.xml" />
+    <EmbeddedResource Include="Maps\Filmgenre.hbm.xml" />
+    <EmbeddedResource Include="Maps\Forfait.hbm.xml" />
+    <EmbeddedResource Include="Maps\Genre.hbm.xml" />
+    <EmbeddedResource Include="Maps\Informationpersonel.hbm.xml" />
+    <EmbeddedResource Include="Maps\Location.hbm.xml" />
+    <EmbeddedResource Include="Maps\Realisateur.hbm.xml" />
+    <EmbeddedResource Include="Maps\Role.hbm.xml" />
+    <EmbeddedResource Include="Maps\Scenariste.hbm.xml" />
+    <EmbeddedResource Include="Maps\Scenaristefilm.hbm.xml" />
+    <EmbeddedResource Include="Maps\Users.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />

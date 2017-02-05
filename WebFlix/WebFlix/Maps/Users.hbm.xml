@@ -18,7 +18,7 @@
       <column name="DATENAISSANCE" sql-type="DATE" not-null="true" />
     </property>
     <property name="Motpasse">
-      <column name="MOTPASSE" sql-type="VARCHAR2" not-null="true" />
+      <column name="MOTDEPASS" sql-type="VARCHAR2" not-null="true" />
     </property>
     <bag name="Location" inverse="true">
       <key column="USERID" />
