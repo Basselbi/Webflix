@@ -3,7 +3,7 @@
   <class name="Scenariste" table="SCENARISTE" lazy="true" >
     <id name="Scenaristeid" column="SCENARISTEID" />
     <many-to-one name="Informationpersonel">
-      <column name="PERSONELID" sql-type="NUMBER" not-null="false" />
+      <column name="PERSONELID" sql-type="INT" not-null="false" />
     </many-to-one>
     <property name="Nomscenariste">
       <column name="NOMSCENARISTE" sql-type="VARCHAR2" not-null="false" />

@@ -1,5 +1,3 @@
-using System;
-using System.Text;
 using System.Collections.Generic;
 using NHibernate.Validator;
 
@@ -9,7 +7,7 @@ namespace WebFlix.Domain {
         public Scenariste() {
 			Scenaristefilm = new List<Scenaristefilm>();
         }
-        public virtual decimal Scenaristeid { get; set; }
+        public virtual int Scenaristeid { get; set; }
         public virtual Informationpersonel Informationpersonel { get; set; }
         [Length(100)]
         public virtual string Nomscenariste { get; set; }

@@ -1,25 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NHibernate;
+using System;
 using System.Windows.Forms;
+using WebFlix.Domain;
+using WebFlix.Helpers;
 
 namespace WebFlix
 {
     public partial class FormRent : Form
     {
-        public FormRent()
+        private Film movie = null;
+
+        public FormRent(Film f)
         {
             InitializeComponent();
+
+            labelTitle.Text = f.ToString();
+            richTextBoxDescription.Text = f.Resume;
+
+            movie = f;
         }
 
         private void buttonRent_Click(object sender, EventArgs e)
         {
+//            ISession s = NHibernateHelper.GetCurrentSession();
+//            ITransaction tx = s.BeginTransaction();
+//            IQuery query = s.GetNamedQuery("FAIRELOCATION");
+//            query.SetInt32(0, UserSession.Current.Userid);
+//            query.SetInt32(1, movie.Filmid);
+//            tx.Commit();
+
             this.Close();
         }
     }

@@ -3,7 +3,7 @@
   <class name="Client" table="CLIENT" lazy="true" >
     <id name="Userid" column="USERID" />
     <many-to-one name="Forfait">
-      <column name="FORFAITID" sql-type="NUMBER" not-null="false" />
+      <column name="FORFAITID" sql-type="INT" not-null="false" />
     </many-to-one>
   </class>
 </hibernate-mapping>

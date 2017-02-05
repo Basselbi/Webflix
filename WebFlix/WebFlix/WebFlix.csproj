@@ -84,11 +84,6 @@
     <Compile Include="Domain\Scenariste.cs" />
     <Compile Include="Domain\Scenaristefilm.cs" />
     <Compile Include="Domain\Users.cs" />
-    <Compile Include="Equipe15_DATASET.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Equipe15_DATASET.xsd</DependentUpon>
-    </Compile>
     <Compile Include="FormBrowse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,7 +130,6 @@
     <None Include="Equipe15_DATASET.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Equipe15_DATASET.Designer.cs</LastGenOutput>
     </None>
     <None Include="Equipe15_DATASET.xss">
       <DependentUpon>Equipe15_DATASET.xsd</DependentUpon>

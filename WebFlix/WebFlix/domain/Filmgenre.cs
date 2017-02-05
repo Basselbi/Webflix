@@ -1,8 +1,3 @@
-using System;
-using System.Text;
-using System.Collections.Generic;
-using NHibernate.Validator;
-
 namespace WebFlix.Domain {
     public class Filmgenre {
         public virtual Genre Genre { get; set; }

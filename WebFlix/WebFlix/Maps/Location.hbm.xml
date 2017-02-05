@@ -3,10 +3,10 @@
   <class name="Location" table="LOCATION" lazy="true" >
     <id name="Locationid" column="LOCATIONID" />
     <many-to-one name="Film">
-      <column name="FILMID" sql-type="NUMBER" not-null="false" />
+      <column name="FILMID" sql-type="INT" not-null="false" />
     </many-to-one>
     <many-to-one name="Users">
-      <column name="USERID" sql-type="NUMBER" not-null="false" />
+      <column name="USERID" sql-type="INT" not-null="false" />
     </many-to-one>
     <property name="Datedebut">
       <column name="DATEDEBUT" sql-type="DATE" not-null="true" />

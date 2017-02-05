@@ -9,10 +9,10 @@
       <column name="COUT" sql-type="NUMBER" not-null="false" />
     </property>
     <property name="Locationmax">
-      <column name="LOCATIONMAX" sql-type="NUMBER" not-null="true" />
+      <column name="LOCATIONMAX" sql-type="INT" not-null="true" />
     </property>
     <property name="Dureemax">
-      <column name="DUREEMAX" sql-type="NUMBER" not-null="true" />
+      <column name="DUREEMAX" sql-type="INT" not-null="true" />
     </property>
     <bag name="Client" inverse="true">
       <key column="FORFAITID" />

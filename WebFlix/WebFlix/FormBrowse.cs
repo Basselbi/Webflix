@@ -27,7 +27,7 @@ namespace WebFlix
 
             foreach (Film f in movies)
             {
-                listBox.Items.Add(f.Titre);
+                listBox.Items.Add(f);
             }
         }
 
@@ -54,7 +54,10 @@ namespace WebFlix
 
         private void buttonRent_Click(object sender, EventArgs e)
         {
-            new FormRent().Show();
+            if (listBox.SelectedItem != null)
+            {
+                new FormRent((Film)listBox.SelectedItem).Show();
+            }
         }
     }
 }

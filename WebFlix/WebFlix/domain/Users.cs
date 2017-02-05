@@ -1,5 +1,4 @@
 using System;
-using System.Text;
 using System.Collections.Generic;
 using NHibernate.Validator;
 
@@ -10,7 +9,7 @@ namespace WebFlix.Domain {
 			Location = new List<Location>();
 			Cartecredit = new List<Cartecredit>();
         }
-        public virtual decimal Userid { get; set; }
+        public virtual int Userid { get; set; }
         [NotNullNotEmpty]
         [Length(24)]
         public virtual string Nom { get; set; }
