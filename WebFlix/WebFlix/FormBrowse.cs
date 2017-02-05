@@ -1,22 +1,34 @@
-﻿using System;
+﻿using NHibernate;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebFlix.Domain;
+using WebFlix.Helpers;
 
 namespace WebFlix
 {
     public partial class FormBrowse : Form
     {
+        private IList<Film> movies = null;
+
         public FormBrowse()
         {
             InitializeComponent();
+
+            // Get movies from db
+            ISession s = NHibernateHelper.GetCurrentSession();
+            ITransaction tx = s.BeginTransaction();
+            IQuery query = s.CreateQuery("select f from Film f");
+            movies = query.List<Film>();
+            tx.Commit();
+
+            foreach (Film f in movies)
+            {
+                listBox.Items.Add(f.Titre);
+            }
         }
 
         // Sexy gradient

@@ -30,8 +30,7 @@
         {
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonRent = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.listBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // buttonLogout
@@ -64,13 +63,13 @@
             this.buttonRent.UseVisualStyleBackColor = false;
             this.buttonRent.Click += new System.EventHandler(this.buttonRent_Click);
             // 
-            // dataGridView1
+            // listBox
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(607, 280);
-            this.dataGridView1.TabIndex = 2;
+            this.listBox.FormattingEnabled = true;
+            this.listBox.Location = new System.Drawing.Point(12, 12);
+            this.listBox.Name = "listBox";
+            this.listBox.Size = new System.Drawing.Size(607, 277);
+            this.listBox.TabIndex = 3;
             // 
             // FormBrowse
             // 
@@ -78,12 +77,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(790, 304);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.listBox);
             this.Controls.Add(this.buttonRent);
             this.Controls.Add(this.buttonLogout);
             this.Name = "FormBrowse";
             this.Text = "WEBFLIX";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -92,6 +90,6 @@
 
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.Button buttonRent;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ListBox listBox;
     }
 }
