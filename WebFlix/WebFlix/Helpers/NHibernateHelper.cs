@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using System.Reflection;
+using System.Web;
 using NHibernate;
 using NHibernate.Cfg;
 
@@ -15,13 +16,30 @@ namespace WebFlix.Helpers
 
         static NHibernateHelper()
         {
-            Configuration cfg = new Configuration();
-            cfg.SetProperty("dialect", "NHibernate.Dialect.Oracle10gDialect");
-            cfg.SetProperty("connection.driver_class", "NHibernate.Driver.OracleManagedDataClientDriver");
-            cfg.SetProperty("connection.connection_string", "User Id=equipe15;Password=7fUXztFc;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=big-data-3.logti.etsmtl.ca)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=Log660)))");
-            cfg.AddAssembly("WebFlix");
-            sessionFactory = cfg.BuildSessionFactory();
+            string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["WebFlix.Properties.Settings.ConnectionString"].ToString();
+          //  Configuration cfg = new Configuration();
 
+            NHibernate.Cfg.Configuration nHibernateConfiguration =
+                                               new NHibernate.Cfg.Configuration();
+            var configuration = nHibernateConfiguration;
+            nHibernateConfiguration.SetProperty(
+                NHibernate.Cfg.Environment.ProxyFactoryFactoryClass,
+             typeof(NHibernate.ByteCode.Castle.ProxyFactoryFactory).AssemblyQualifiedName);
+            nHibernateConfiguration.SetProperty(
+                  NHibernate.Cfg.Environment.Dialect,
+                typeof(NHibernate.Dialect.Oracle12cDialect).AssemblyQualifiedName);
+            nHibernateConfiguration.SetProperty(
+              NHibernate.Cfg.Environment.ConnectionString, connectionString);
+            nHibernateConfiguration.SetProperty(
+              NHibernate.Cfg.Environment.FormatSql, "true");
+            nHibernateConfiguration.AddAssembly(Assembly.GetCallingAssembly());
+
+            //            cfg.SetProperty("dialect", "NHibernate.Dialect.Oracle10gDialect");
+            //            cfg.SetProperty("connection.driver_class", "NHibernate.Driver.OracleManagedDataClientDriver");
+            //            cfg.SetProperty("connection.connection_string", connectionString);
+            //            cfg.AddAssembly("WebFlix");
+            // sessionFactory = cfg.BuildSessionFactory();
+            sessionFactory = nHibernateConfiguration .BuildSessionFactory();
             currentSession = null;
         }
 

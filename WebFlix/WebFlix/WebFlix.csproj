@@ -45,6 +45,10 @@
       <HintPath>..\packages\NHibernate.4.1.0.4000\lib\net40\NHibernate.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle, Version=4.0.3.4000, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.ByteCode.Castle-v4.4.0.3.4000-rc2\lib\net40\NHibernate.ByteCode.Castle.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="NHibernate.Validator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\NHibernate.Validator.dll</HintPath>
@@ -84,6 +88,7 @@
     <Compile Include="Domain\Scenariste.cs" />
     <Compile Include="Domain\Scenaristefilm.cs" />
     <Compile Include="Domain\Users.cs" />
+    <Compile Include="Driver\OracleDriver.cs" />
     <Compile Include="FormBrowse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,7 +169,9 @@
     <EmbeddedResource Include="Maps\Scenaristefilm.hbm.xml" />
     <EmbeddedResource Include="Maps\Users.hbm.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Images\logo.png" />
   </ItemGroup>
