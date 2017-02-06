@@ -124,16 +124,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Equipe15_DATASET.xsc">
-      <DependentUpon>Equipe15_DATASET.xsd</DependentUpon>
-    </None>
-    <None Include="Equipe15_DATASET.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-    </None>
-    <None Include="Equipe15_DATASET.xss">
-      <DependentUpon>Equipe15_DATASET.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -165,8 +155,10 @@
     <EmbeddedResource Include="Maps\Scenaristefilm.hbm.xml" />
     <EmbeddedResource Include="Maps\Users.hbm.xml" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Images\" />
+    <Content Include="Images\logo.png" />
+    <EmbeddedResource Include="Maps\Fairelocation.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
