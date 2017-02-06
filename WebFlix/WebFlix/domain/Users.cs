@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using NHibernate.Validator;
+using NHibernate.Validator.Constraints;
 
 namespace WebFlix.Domain {
     
