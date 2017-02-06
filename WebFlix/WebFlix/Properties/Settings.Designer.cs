@@ -27,7 +27,7 @@ namespace WebFlix.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("DATA SOURCE=big-data-3.logti.etsmtl.ca:1521/ Log660;PASSWORD=7fUXztFc;PERSIST SEC" +
-            "URITY INFO=True;USER ID=EQUIPE15")]
+            "URITY INFO=True;USER ID=EQUIPE15 ;Connection Timeout=120;")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));

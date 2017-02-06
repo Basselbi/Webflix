@@ -18,7 +18,6 @@ namespace WebFlix.Helpers
         {
             string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["WebFlix.Properties.Settings.ConnectionString"].ToString();
           //  Configuration cfg = new Configuration();
-
             NHibernate.Cfg.Configuration nHibernateConfiguration =
                                                new NHibernate.Cfg.Configuration();
             var configuration = nHibernateConfiguration;
