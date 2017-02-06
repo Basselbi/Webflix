@@ -39,7 +39,7 @@ namespace WebFlix.Helpers
             //            cfg.SetProperty("connection.connection_string", connectionString);
             //            cfg.AddAssembly("WebFlix");
             // sessionFactory = cfg.BuildSessionFactory();
-            sessionFactory = nHibernateConfiguration .BuildSessionFactory();
+            sessionFactory = nHibernateConfiguration.BuildSessionFactory();
             currentSession = null;
         }
 
