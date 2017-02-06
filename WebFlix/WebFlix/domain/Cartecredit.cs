@@ -1,24 +1,20 @@
-using System;
-using System.Text;
-using System.Collections.Generic;
+using NHibernate.Validator;
 using NHibernate.Validator.Constraints;
 
-
-namespace WebFlix.domain {
-    
+namespace WebFlix.Domain {
     public class Cartecredit {
-        public virtual decimal Carteid { get; set; }
+        public virtual int Carteid { get; set; }
         public virtual Users Users { get; set; }
         [NotNullNotEmpty]
-        public virtual decimal Typecarte { get; set; }
+        public virtual int Typecarte { get; set; }
         [NotNullNotEmpty]
         [Length(16)]
         public virtual string Numero { get; set; }
         [NotNullNotEmpty]
-        public virtual decimal Mois { get; set; }
+        public virtual int Mois { get; set; }
         [NotNullNotEmpty]
-        public virtual decimal Annee { get; set; }
+        public virtual int Annee { get; set; }
         [NotNullNotEmpty]
-        public virtual decimal Ccv { get; set; }
+        public virtual int Ccv { get; set; }
     }
 }

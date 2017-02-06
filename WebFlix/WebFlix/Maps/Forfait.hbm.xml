@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<hibernate-mapping assembly="WebFlix" namespace="WebFlix.domain" xmlns="urn:nhibernate-mapping-2.2">
+<hibernate-mapping assembly="WebFlix" namespace="WebFlix.Domain" xmlns="urn:nhibernate-mapping-2.2">
   <class name="Forfait" table="FORFAIT" lazy="true" >
     <id name="Forfaitid" column="FORFAITID" />
     <property name="Nomforfait">
@@ -9,10 +9,10 @@
       <column name="COUT" sql-type="NUMBER" not-null="false" />
     </property>
     <property name="Locationmax">
-      <column name="LOCATIONMAX" sql-type="NUMBER" not-null="true" />
+      <column name="LOCATIONMAX" sql-type="INT" not-null="true" />
     </property>
     <property name="Dureemax">
-      <column name="DUREEMAX" sql-type="NUMBER" not-null="true" />
+      <column name="DUREEMAX" sql-type="INT" not-null="true" />
     </property>
     <bag name="Client" inverse="true">
       <key column="FORFAITID" />

@@ -1,17 +1,20 @@
 using System;
-using System.Text;
-using System.Collections.Generic;
+using NHibernate.Validator;
 using NHibernate.Validator.Constraints;
 
-
-namespace WebFlix.domain {
+namespace WebFlix.Domain {
     
     public class Location {
-        public virtual decimal Locationid { get; set; }
+        public virtual int Locationid { get; set; }
         public virtual Film Film { get; set; }
         public virtual Users Users { get; set; }
         [NotNullNotEmpty]
         public virtual DateTime Datedebut { get; set; }
         public virtual DateTime? Dateretour { get; set; }
+
+        public override string ToString()
+        {
+            return Film.ToString();
+        }
     }
 }

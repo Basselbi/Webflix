@@ -1,10 +1,9 @@
 using System;
-using System.Text;
 using System.Collections.Generic;
+using NHibernate.Validator;
 using NHibernate.Validator.Constraints;
 
-
-namespace WebFlix.domain {
+namespace WebFlix.Domain {
     
     public class Informationpersonel {
         public Informationpersonel() {
@@ -12,7 +11,7 @@ namespace WebFlix.domain {
 			Acteur = new List<Acteur>();
 			Scenariste = new List<Scenariste>();
         }
-        public virtual decimal Personelid { get; set; }
+        public virtual int Personelid { get; set; }
         [Length(50)]
         public virtual string Nom { get; set; }
         [Length(50)]

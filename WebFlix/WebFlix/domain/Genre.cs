@@ -1,16 +1,13 @@
-using System;
-using System.Text;
 using System.Collections.Generic;
+using NHibernate.Validator;
 using NHibernate.Validator.Constraints;
 
-
-namespace WebFlix.domain {
-    
+namespace WebFlix.Domain {
     public class Genre {
         public Genre() {
 			Filmgenre = new List<Filmgenre>();
         }
-        public virtual decimal Genreid { get; set; }
+        public virtual int Genreid { get; set; }
         [NotNullNotEmpty]
         [Length(50)]
         public virtual string Nomgenre { get; set; }

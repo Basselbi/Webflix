@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<hibernate-mapping assembly="WebFlix" namespace="WebFlix.domain" xmlns="urn:nhibernate-mapping-2.2">
+<hibernate-mapping assembly="WebFlix" namespace="WebFlix.Domain" xmlns="urn:nhibernate-mapping-2.2">
   <class name="Users" table="USERS" lazy="true" >
     <id name="Userid" column="USERID" />
     <property name="Nom">
@@ -18,7 +18,7 @@
       <column name="DATENAISSANCE" sql-type="DATE" not-null="true" />
     </property>
     <property name="Motpasse">
-      <column name="MOTPASSE" sql-type="VARCHAR2" not-null="true" />
+      <column name="MOTDEPASS" sql-type="VARCHAR2" not-null="true" />
     </property>
     <bag name="Location" inverse="true">
       <key column="USERID" />

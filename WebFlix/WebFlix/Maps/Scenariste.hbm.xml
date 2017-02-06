@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<hibernate-mapping assembly="WebFlix" namespace="WebFlix.domain" xmlns="urn:nhibernate-mapping-2.2">
+<hibernate-mapping assembly="WebFlix" namespace="WebFlix.Domain" xmlns="urn:nhibernate-mapping-2.2">
   <class name="Scenariste" table="SCENARISTE" lazy="true" >
     <id name="Scenaristeid" column="SCENARISTEID" />
     <many-to-one name="Informationpersonel">
-      <column name="PERSONELID" sql-type="NUMBER" not-null="false" />
+      <column name="PERSONELID" sql-type="INT" not-null="false" />
     </many-to-one>
     <property name="Nomscenariste">
       <column name="NOMSCENARISTE" sql-type="VARCHAR2" not-null="false" />

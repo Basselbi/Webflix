@@ -1,13 +1,8 @@
-using System;
-using System.Text;
-using System.Collections.Generic;
+using NHibernate.Validator;
 using NHibernate.Validator.Constraints;
-
-
-namespace WebFlix.domain {
-    
+namespace WebFlix.Domain {
     public class Employe {
-        public virtual decimal Userid { get; set; }
+        public virtual int Userid { get; set; }
         [Length(24)]
         public virtual string Matricule { get; set; }
     }
