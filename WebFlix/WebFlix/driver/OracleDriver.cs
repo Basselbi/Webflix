@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System;
+using System.Data;
+
 using NHibernate.Driver;
 using Oracle.ManagedDataAccess.Client;
 
-namespace WebFlix.Driver
+namespace WebFlix.driver
 {
     public class OracleDriver : DriverBase
     {

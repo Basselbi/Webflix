@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+  <session-factory>
+    <property name="connection.provider">
+      NHibernate.Connection.DriverConnectionProvider
+    </property>
+    <property name="dialect">
+      NHibernate.Dialect.Oracle10gDialect
+    </property>
+    <property name="connection.driver_class">
+      NHibernateOracleExample.Driver.OracleDriver,WebFlix
+    </property>
+    <property name="connection.connection_string">
+      Host=big-data-3.logti.etsmtl.ca:1521;Password=7fUXztFc;Port=1521;SID=Log660;User ID=EQUIPE15
+    </property>
+    <property name="show_sql">true</property>
+    <property name="proxyfactory.factory_class">
+      NHibernate.ByteCode.Castle.ProxyFactoryFactory, NHibernate.ByteCode.Castle
+    </property>
+  </session-factory>
+</hibernate-configuration>
