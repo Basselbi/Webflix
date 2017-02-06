@@ -31,6 +31,7 @@
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonRent = new System.Windows.Forms.Button();
             this.listBox = new System.Windows.Forms.ListBox();
+            this.buttonMyRentals = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonLogout
@@ -71,12 +72,28 @@
             this.listBox.Size = new System.Drawing.Size(607, 277);
             this.listBox.TabIndex = 3;
             // 
+            // buttonMyRentals
+            // 
+            this.buttonMyRentals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(35)))), ((int)(((byte)(58)))));
+            this.buttonMyRentals.FlatAppearance.BorderSize = 0;
+            this.buttonMyRentals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMyRentals.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMyRentals.ForeColor = System.Drawing.Color.White;
+            this.buttonMyRentals.Location = new System.Drawing.Point(625, 219);
+            this.buttonMyRentals.Name = "buttonMyRentals";
+            this.buttonMyRentals.Size = new System.Drawing.Size(150, 33);
+            this.buttonMyRentals.TabIndex = 4;
+            this.buttonMyRentals.Text = "MES LOCATIONS";
+            this.buttonMyRentals.UseVisualStyleBackColor = false;
+            this.buttonMyRentals.Click += new System.EventHandler(this.buttonMyRentals_Click);
+            // 
             // FormBrowse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(790, 304);
+            this.Controls.Add(this.buttonMyRentals);
             this.Controls.Add(this.listBox);
             this.Controls.Add(this.buttonRent);
             this.Controls.Add(this.buttonLogout);
@@ -91,5 +108,6 @@
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.Button buttonRent;
         private System.Windows.Forms.ListBox listBox;
+        private System.Windows.Forms.Button buttonMyRentals;
     }
 }

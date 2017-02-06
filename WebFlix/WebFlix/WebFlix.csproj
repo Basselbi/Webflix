@@ -90,6 +90,12 @@
     <Compile Include="FormBrowse.Designer.cs">
       <DependentUpon>FormBrowse.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBrowseMyRentals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBrowseMyRentals.Designer.cs">
+      <DependentUpon>FormBrowseMyRentals.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormBrowse.resx">
       <DependentUpon>FormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBrowseMyRentals.resx">
+      <DependentUpon>FormBrowseMyRentals.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

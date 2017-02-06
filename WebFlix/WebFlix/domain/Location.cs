@@ -10,5 +10,10 @@ namespace WebFlix.Domain {
         [NotNullNotEmpty]
         public virtual DateTime Datedebut { get; set; }
         public virtual DateTime? Dateretour { get; set; }
+
+        public override string ToString()
+        {
+            return Film.ToString();
+        }
     }
 }

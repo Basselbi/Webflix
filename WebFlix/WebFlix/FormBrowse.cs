@@ -59,5 +59,10 @@ namespace WebFlix
                 new FormRent((Film)listBox.SelectedItem).Show();
             }
         }
+
+        private void buttonMyRentals_Click(object sender, EventArgs e)
+        {
+            new FormBrowseMyRentals().Show();
+        }
     }
 }
